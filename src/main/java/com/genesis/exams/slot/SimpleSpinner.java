@@ -23,6 +23,7 @@ public class SimpleSpinner implements Spinner {
 			cumulativeWeight = cumulativeWeight + symbol.getWeight();
 			if (cumulativeWeight >= randomWeight) {
 				stopLocation = symbol;
+				break;
 			}
 		}
 		
