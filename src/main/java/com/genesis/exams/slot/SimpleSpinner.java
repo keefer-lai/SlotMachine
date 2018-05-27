@@ -17,14 +17,12 @@ public class SimpleSpinner implements Spinner {
 
 	private Symbol findSymbol(final Symbol[] symbols, final int randomWeight) {
 		int cumulativeWeight = 0;
-		Symbol stopLocation = symbols[0];
+		Symbol stopLocation = null;
 		
 		for (Symbol symbol : symbols) {	
 			cumulativeWeight = cumulativeWeight + symbol.getWeight();
-			if (cumulativeWeight <= randomWeight) {
+			if (cumulativeWeight >= randomWeight) {
 				stopLocation = symbol;
-			} else {
-				break;
 			}
 		}
 		
